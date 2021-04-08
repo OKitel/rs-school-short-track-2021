@@ -14,7 +14,7 @@
  */
 function isMAC48Address(n) {
   if (n.match(/^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$/)) return true;
-  else return false;
+  return false;
 }
 
 module.exports = isMAC48Address;

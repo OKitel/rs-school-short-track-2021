@@ -22,12 +22,12 @@
  * ]
  */
 function minesweeper(matrix) {
-  let result = [];
+  const result = [];
   for (let i = 0; i < matrix.length; i++) {
-    let arr = [];
+    const arr = [];
     for (let j = 0; j < matrix[i].length; j++) {
       let sum = 0;
-      if (i == 0) {
+      if (i === 0) {
         if (matrix[i][j + 1]) {
           sum++;
         }
@@ -43,7 +43,7 @@ function minesweeper(matrix) {
         if (matrix[i + 1][j - 1]) {
           sum++;
         }
-      } else if (i == matrix.length - 1) {
+      } else if (i === matrix.length - 1) {
         if (matrix[i][j + 1]) {
           sum++;
         }
@@ -86,7 +86,7 @@ function minesweeper(matrix) {
         }
       }
       arr.push(sum);
-      if (j == matrix[i].length - 1) {
+      if (j === matrix[i].length - 1) {
         result.push(arr);
       }
     }

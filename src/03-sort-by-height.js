@@ -12,12 +12,13 @@
 function sortByHeight(arr) {
   function compareNumeric(a, b) {
     if (a > b) return 1;
-    if (a == b) return 0;
+    if (a === b) return 0;
     if (a < b) return -1;
+    return 0;
   }
-  let minusOne = [];
+  const minusOne = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == -1) {
+    if (arr[i] === -1) {
       minusOne.push(i);
     }
   }

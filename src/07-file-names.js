@@ -15,13 +15,14 @@
  */
 function renameFiles(names) {
   let arr = [];
-  if (arr.length == names.length) return arr;
+  if (arr.length === names.length) return arr;
   arr = [names[0]];
   for (let i = 1; i < names.length; i++) {
     if (arr.includes(names[i])) {
+      let newNames;
       let x = 1;
       do {
-        newNames = names[i] + `(${x})`;
+        newNames = `${names[i]}(${x})`;
         x++;
       } while (arr.includes(newNames));
       arr.push(newNames);
